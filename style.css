@@ -3,7 +3,7 @@ Theme Name: themice
 Description: Refined Themice layout originally made by Melibellule
 Author: Ruslan Mukhametzhanov
 Author URI: https://devsaider.ru/
-Version: 0.3
+Version: 0.3a
 */
 
 body {
@@ -72,7 +72,8 @@ body a {
 
 .stone-block {
   border: 15px solid transparent;
-  border-image: url("images/stoneborder2.png") 15 repeat;
+  -o-border-image: url("images/stoneborder2.png") 15 repeat;
+     border-image: url("images/stoneborder2.png") 15 repeat;
   background-color: #191818;
 }
 

@@ -1,5 +1,5 @@
 <?php
-define('THEMICE_VERSION', "0.3");
+define('THEMICE_VERSION', "0.3a");
 
 if (!isset($content_width)) {
   $content_width = 900;
