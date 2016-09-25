@@ -1,21 +1,29 @@
+<?php $options = get_option('tm_theme_options'); ?>
 <?php get_header(); ?>
     <div id="maincontent" class="stone-block">
       <div id="content">
         <?php if (is_home()): ?>
-        <div id="game" style="width:800px;height:600px;">
-          <!-- trick for fullscreen -->
-          <div id="transformice" style="width:100%;height:100%;">
-            <object id="swf1" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="100%" height="100%" align="middle">
-            <param name="allowScriptAccess" value="always">
-            <param name="movie" value="http://cdn.nanomice.eu/TFMC.swf">
-            <param name="menu" value="true">
-            <param name="quality" value="high">
-            <param name="bgcolor" value="#6A7495">
-            <embed id="swf2" src="http://cdn.nanomice.eu/TFMC.swf" wmode="direct" menu="true" quality="high" bgcolor="#6A7495" width="100%" height="100%" name="Transformice" align="middle" swliveconnect="true" allowfullscreen="true" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
-            </object>
-          </div>
-        </div> <!-- end of #game -->
-        <hr>
+          <?php if ($options["tm_pub_2"] != ""): ?>
+            <div id="pub2">
+              <?=$options["tm_pub_2"]; ?>
+            </div>
+            <hr>
+          <?php endif; ?>
+
+          <div id="game" style="width:800px;height:600px;">
+            <!-- trick for fullscreen -->
+            <div id="transformice" style="width:100%;height:100%;">
+              <object id="swf1" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="100%" height="100%" align="middle">
+              <param name="allowScriptAccess" value="always">
+              <param name="movie" value="http://cdn.nanomice.eu/TFMC.swf">
+              <param name="menu" value="true">
+              <param name="quality" value="high">
+              <param name="bgcolor" value="#6A7495">
+              <embed id="swf2" src="http://cdn.nanomice.eu/TFMC.swf" wmode="direct" menu="true" quality="high" bgcolor="#6A7495" width="100%" height="100%" name="Transformice" align="middle" swliveconnect="true" allowfullscreen="true" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
+              </object>
+            </div>
+          </div> <!-- end of #game -->
+          <hr>
         <?php endif;
 
         if (!have_posts()) {
@@ -51,12 +59,19 @@
                   </div>
                 <?php endif; ?>
               </div>
-              <hr>
               <?php
+              if (!is_page()) {echo "<hr>";}
           }
           ?></div><?php
         }
         ?>
+        <?php if ($options["tm_pub_3"] != ""): ?>
+          <div id="pub3">
+            <?=$options["tm_pub_3"]; ?>
+          </div>
+          <hr>
+        <?php endif; ?>
+
         <div class="navigation">
           <?php
           if (is_page()):

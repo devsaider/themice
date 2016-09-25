@@ -3,7 +3,7 @@ Theme Name: themice
 Description: Refined Themice layout originally made by Melibellule
 Author: Ruslan Mukhametzhanov
 Author URI: https://devsaider.ru/
-Version: 0.1a
+Version: 0.2
 */
 
 body {
@@ -178,4 +178,8 @@ body a {
   height: 35px;
   content: "";
   margin-left: 10px;
+}
+
+#pub1, #pub2, #pub3 {
+  text-align: center;
 }

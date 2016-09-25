@@ -21,7 +21,9 @@ function pleinEcran(OUI) {
         document.getElementById("transformice").style.height = "100%";
 
 
-        document.getElementById("idPub").style.display = "none";
+        document.getElementById("pub1").style.display = "none";
+        document.getElementById("pub2").style.display = "none";
+        document.getElementById("pub3").style.display = "none";
         document.getElementById("fb-comments").style.display = "none";
     } else {
         document.getElementById("transformice").style.position = "static";
@@ -29,7 +31,9 @@ function pleinEcran(OUI) {
         document.getElementById("transformice").style.height = "600px";
 
 
-        document.getElementById("idPub").style.display = "inline";
+        document.getElementById("pub1").style.display = "block";
+        document.getElementById("pub2").style.display = "block";
+        document.getElementById("pub2").style.display = "block";
         document.getElementById("fb-comments").style.display = "inline";
     }
 }
