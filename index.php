@@ -24,7 +24,13 @@
             </div>
           </div> <!-- end of #game -->
           <hr>
-        <?php endif;
+          <?php if ($options["tm_pub_3"] != ""): ?>
+            <div id="pub3">
+              <?=$options["tm_pub_3"]; ?>
+            </div>
+            <hr>
+          <?php endif;
+        endif;
 
         if (!have_posts()) {
 
@@ -65,7 +71,7 @@
           ?></div><?php
         }
         ?>
-        <?php if ($options["tm_pub_3"] != ""): ?>
+        <?php if (!is_home() && $options["tm_pub_3"] != ""): ?>
           <div id="pub3">
             <?=$options["tm_pub_3"]; ?>
           </div>
