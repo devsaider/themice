@@ -73,6 +73,7 @@ body a {
 .stone-block {
   border: 15px solid transparent;
   -o-border-image: url("images/stoneborder2.png") 15 repeat;
+  -webkit-border-image: url("images/stoneborder2.png") 15 repeat;
      border-image: url("images/stoneborder2.png") 15 repeat;
   background-color: #191818;
 }
