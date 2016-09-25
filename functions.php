@@ -120,6 +120,18 @@ function themice_settings_register() {
 
   add_settings_field('custom_link', 'Link', 'tm_display_setting', 'tm_theme_options.php', 'tm_cl_section', $field_args);
 
+  $field_args = array(
+    'type'      => 'text',
+    'id'        => 'tm_cdndomain',
+    'name'      => 'tm_cdndomain',
+    'desc'      => 'full domain name (ex. cdn.mice.tf)',
+    'std'       => '',
+    'label_for' => 'tm_cdndomain',
+    'class'     => 'css_class'
+  );
+
+  add_settings_field('tm_cdndomain', 'CDN domain', 'tm_display_setting', 'tm_theme_options.php', 'tm_cl_section', $field_args);
+
   add_settings_section('tm_ad_section', 'AdSense', 'tm_display_section', 'tm_theme_options.php');
 
   $field_args = array(
@@ -189,4 +201,16 @@ add_action('admin_menu', 'themice_settings_menu');
 function more_posts() {
   global $wp_query;
   return $wp_query->current_post + 1 < $wp_query->post_count;
+}
+
+function get_current_domain() {
+  $options = get_option('tm_theme_options');
+
+  if ($options["tm_cdndomain"] != "") {
+    return $options["tm_cdndomain"];
+  } else {
+    $host = $_SERVER['SERVER_NAME'];
+    list($subd, $domain) = explode('.', $host, 2);
+    return "cdn." . $domain;
+  }
 }
