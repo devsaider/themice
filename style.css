@@ -72,9 +72,7 @@ body a {
 
 .stone-block {
   border: 15px solid transparent;
-  border-image-source: url("images/stoneborder2.png");
-  border-image-repeat: repeat;
-  border-image-slice: 15;
+  border-image: url("images/stoneborder2.png") 15 repeat;
   background-color: #191818;
 }
 
@@ -84,7 +82,7 @@ body a {
 }
 
 .stone-block > #content hr {
-  background:url("images/separator.png") no-repeat top center;
+  background: url("images/separator.png") no-repeat top center;
   height:15px;
   border:none !important;
   margin: 0 auto;
