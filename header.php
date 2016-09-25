@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title><?php is_front_page() ? bloginfo('description') : wp_title('');?> &raquo; <?php bloginfo('name'); ?></title>
